@@ -55,3 +55,4 @@ The current build is available to test under [this link](https://szymon-kulak.gi
 #### [ ] Milestone: Alpha Release
 
 - [ ] See what the future holds 😉
+- [ ] Rewrite in Rust
