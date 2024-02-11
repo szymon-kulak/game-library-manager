@@ -1,5 +1,4 @@
 import { useState } from "react";
-import "./App.scss";
 
 function App() {
 	const [darkMode, toggleDarkMode] = useState(true);
