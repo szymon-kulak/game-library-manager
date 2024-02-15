@@ -1,37 +1,8 @@
 import { useState } from "react";
+import GameList from "./GameList";
 
 function App() {
 	const [darkMode, toggleDarkMode] = useState(true);
-
-	// function Game(id: number, name: string) {
-	// 	this.id = id;
-	// 	this.name = name;
-	// }
-
-	// const mario3 = new Game(1, "Super Mario Bros 3");
-
-	interface Game {
-		id: number;
-		name: string;
-		year: number;
-		status: string;
-	}
-
-	const gamesArray: Game[] = [
-		{ id: 1, name: "Super Mario Bros 3", year: 1988, status: "Backlog" },
-		{
-			id: 2,
-			name: "Prince of Persia: The Lost Crown",
-			year: 2024,
-			status: "Playing",
-		},
-		{
-			id: 3,
-			name: "Assassin's Creed",
-			year: 2007,
-			status: "Playing",
-		},
-	];
 
 	const gameColorsArray: string[] = [
 		"bg-red-500",
@@ -78,7 +49,7 @@ function App() {
 			</nav>
 			<div id="main-wrapper" className="h-full w-full pl-64 pt-16">
 				<main className="flex h-full w-full gap-4 bg-zinc-800 p-6">
-					{gamesArray.map((game) => (
+					{GameList.map((game) => (
 						<div
 							className={`relative h-32 w-48 rounded-xl ${gameColorsArray[Math.floor(Math.random() * gameColorsArray.length)]} shadow-xl`}
 						>
