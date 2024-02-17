@@ -1,15 +1,15 @@
 import { useState } from "react";
 import GameList from "./GameList";
+import GameTile from "./GameTile";
 
 function App() {
 	const [darkMode, toggleDarkMode] = useState(true);
 
-	const gameColorsArray: string[] = [
-		"bg-red-500",
-		"bg-emerald-500",
-		"bg-orange-500",
-		"bg-yellow-500",
-	];
+	let gamesToDisplay = GameList;
+
+	let displayedGames = gamesToDisplay.map((game) => (
+		<GameTile key={game.id} containedGame={game} />
+	));
 
 	return (
 		<div className={`h-screen w-screen bg-zinc-800 text-zinc-200`}>
@@ -49,21 +49,7 @@ function App() {
 			</nav>
 			<div id="main-wrapper" className="h-full w-full pl-64 pt-16">
 				<main className="flex h-full w-full gap-4 bg-zinc-800 p-6">
-					{GameList.map((game) => (
-						<div
-							className={`relative h-32 w-48 rounded-xl ${gameColorsArray[Math.floor(Math.random() * gameColorsArray.length)]} shadow-xl`}
-						>
-							<div
-								key={game.id}
-								className=" h-full rounded-xl p-4 text-center"
-							>
-								{game.name}
-							</div>
-							<div className="absolute bottom-0 h-12 w-full rounded-b-xl bg-black p-4 text-center">
-								{game.status}
-							</div>
-						</div>
-					))}
+					{displayedGames}
 				</main>
 			</div>
 		</div>
