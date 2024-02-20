@@ -1,11 +1,17 @@
+import { useState } from "react";
 import { Game } from "./GameList";
+import GameMoreInfo from "./GameMoreInfo";
 
 function GameTile({ containedGame }: { containedGame: Game }) {
+	const [moreInfo, toggleMoreInfo] = useState(false);
+
 	return (
 		<div
-			className={`relative m-2 inline-block h-32 w-48 overflow-hidden rounded-xl shadow-xl`}
+			className={`relative m-2 inline-block h-32 w-48 cursor-pointer overflow-hidden rounded-xl shadow-xl`}
+			onClick={() => toggleMoreInfo(!moreInfo)}
 		>
-			<div className=" h-full overflow-hidden rounded-xl bg-zinc-600 text-center">
+			<GameMoreInfo containedGame={containedGame} isVisible={moreInfo} />
+			<div className="h-full overflow-hidden rounded-xl bg-zinc-600 text-center">
 				{containedGame.cover ? (
 					<img
 						src={containedGame.cover}
