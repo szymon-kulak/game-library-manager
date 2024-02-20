@@ -4,16 +4,25 @@ import GameTile from "./GameTile";
 
 function App() {
 	const [darkMode, toggleDarkMode] = useState(true);
+	const [gamesToDisplay, setGamesToDisplay] = useState(GameList);
 
-	let gamesToDisplay = GameList;
-
-	let displayedGames = gamesToDisplay.map((game) => (
-		<GameTile key={game.id} containedGame={game} />
-	));
+	const addGame = function () {
+		let id = GameList.length + 1;
+		let title = "New Game";
+		let year = 2069;
+		let status = "Backlog";
+		GameList.push({
+			id: id,
+			title: title,
+			year: year,
+			status: status,
+		});
+		setGamesToDisplay([...GameList]);
+	};
 
 	return (
 		<div className={`h-screen w-screen bg-zinc-800 text-zinc-200`}>
-			<header className="fixed flex h-16 w-screen items-center justify-between bg-zinc-900 p-4 shadow-lg">
+			<header className="fixed z-10 flex h-16 w-screen items-center justify-between bg-zinc-900 p-4 shadow-lg">
 				<ul>
 					<li>GLM</li>
 				</ul>
@@ -48,9 +57,17 @@ function App() {
 				</ul>
 			</nav>
 			<div id="main-wrapper" className="h-full w-full pl-64 pt-16">
-				<main className="flex h-full w-full gap-4 bg-zinc-800 p-6">
-					{displayedGames}
+				<main className=" h-full w-full flex-wrap gap-4 overflow-scroll bg-zinc-800 p-6">
+					{gamesToDisplay.map((game) => (
+						<GameTile key={game.id} containedGame={game} />
+					))}
 				</main>
+				<button
+					className="absolute bottom-8 right-8 h-16 w-40 rounded-xl bg-zinc-600 shadow-xl"
+					onClick={addGame}
+				>
+					+ Add Game
+				</button>
 			</div>
 		</div>
 	);
