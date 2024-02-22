@@ -39,7 +39,8 @@ The current build is available to test under [this link](https://szymon-kulak.gi
 - [ ] Implement Adding new Games manually by the user 
 - [ ] Implement Changing Game Statuses
 - [ ] Implement the Right Click Menu
-- [ ] Clean up the design 
+- [ ] Clean up the design
+- [ ] Add Light Mode
 - [ ] Implement saving data to browser storage
 
 #### [ ] Milestone: App Operational
