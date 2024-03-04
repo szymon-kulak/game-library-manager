@@ -3,7 +3,9 @@ export interface Game {
 	title: string;
 	year: number;
 	status: string;
+	genres?: string[];
 	cover?: string;
+	background?: string;
 }
 
 const GameList: Game[] = [
