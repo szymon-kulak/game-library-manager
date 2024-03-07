@@ -14,9 +14,12 @@ function GameMoreInfo({
 		>
 			<div
 				id="info"
-				className="min-h-[60%] w-[40%] rounded-xl bg-zinc-700 shadow-xl"
+				className="min-h-[70%] w-[40%] overflow-scroll rounded-xl bg-zinc-700 shadow-xl"
 			>
-				<div className="flex items-center justify-between rounded-xl bg-zinc-800 p-4 shadow-xl">
+				<div
+					id="hero-image"
+					className="flex items-center justify-between rounded-xl bg-zinc-800 p-4 shadow-xl"
+				>
 					<img
 						src={containedGame.cover}
 						className="inline-block w-40 rounded-xl shadow-xl"
@@ -27,6 +30,42 @@ function GameMoreInfo({
 						</h3>
 					</div>
 				</div>
+				<table className="w-full overflow-scroll">
+					<tr>
+						<td className="p-2 font-bold">Status</td>
+						<td className="p-2">{containedGame.status}</td>
+					</tr>
+					<tr>
+						<td className="p-2 font-bold">Full Title</td>
+						<td className="p-2">{containedGame.title}</td>
+					</tr>
+					<tr>
+						<td className="p-2 font-bold">Year of Release</td>
+						<td className="p-2">{containedGame.year}</td>
+					</tr>
+					<tr>
+						<td className="p-2 font-bold">Platform</td>
+						<td className="p-2">{containedGame.platform}</td>
+					</tr>
+					{containedGame.developer ? (
+						<tr>
+							<td className="p-2 font-bold">Developer</td>
+							<td className="p-2">{containedGame.developer}</td>
+						</tr>
+					) : null}
+					{containedGame.publisher ? (
+						<tr>
+							<td className="p-2 font-bold">Publisher</td>
+							<td className="p-2">{containedGame.publisher}</td>
+						</tr>
+					) : null}
+					{containedGame.genres ? (
+						<tr>
+							<td className="p-2 font-bold">Developer</td>
+							<td className="p-2">{containedGame.genres} </td>
+						</tr>
+					) : null}
+				</table>
 			</div>
 		</div>
 	);
