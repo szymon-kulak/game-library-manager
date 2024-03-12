@@ -5,16 +5,33 @@ import GameTile from "./GameTile";
 function App() {
 	const [darkMode, toggleDarkMode] = useState(true);
 	const [gamesToDisplay, setGamesToDisplay] = useState(GameList);
+	const [searchText, updateSearch] = useState("");
+
+	const filterBySearch = function (text: string) {
+		updateSearch(text);
+		setGamesToDisplay(
+			GameList.filter(
+				(game) =>
+					game.title.toLowerCase().includes(text.toLowerCase()) ||
+					game.developer
+						?.toLowerCase()
+						.includes(text.toLowerCase()) ||
+					game.publisher?.toLowerCase().includes(text.toLowerCase()),
+			),
+		);
+	};
 
 	const addGame = function () {
 		let id = GameList.length + 1;
 		let title = "New Game";
 		let year = 2069;
+		let platform = "PS4";
 		let status = "Backlog";
 		GameList.push({
 			id: id,
 			title: title,
 			year: year,
+			platform: platform,
 			status: status,
 		});
 		setGamesToDisplay([...GameList]);
@@ -32,6 +49,8 @@ function App() {
 					id="search"
 					className="h-8 w-64 rounded-sm bg-zinc-400 p-2 opacity-20 shadow-sm outline-none transition-all	duration-300 ease-linear placeholder:text-zinc-200 focus:h-10 focus:w-[40rem] focus:text-zinc-950 focus:opacity-100 focus:placeholder:text-zinc-950"
 					placeholder="Search"
+					value={searchText}
+					onChange={(e) => filterBySearch(e.target.value)}
 				/>
 				<button onClick={() => toggleDarkMode(!darkMode)}>
 					{darkMode ? "Dark Mode" : "Light Mode"}

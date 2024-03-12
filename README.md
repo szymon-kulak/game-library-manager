@@ -33,9 +33,9 @@ The current build is available to test under [this link](https://szymon-kulak.gi
 - [x] Implement the layout skeleton
 - [x] Apply basic styling
 - [x] Create Game Card Component
-- [ ] Create the Expanded Game Card Component
+- [x] Create the Expanded Game Card Component
 - [ ] Implement the Filter functionality
-- [ ] Implement Search
+- [x] Implement Search
 - [ ] Implement Adding new Games manually by the user 
 - [ ] Implement Changing Game Statuses
 - [ ] Implement the Right Click Menu
