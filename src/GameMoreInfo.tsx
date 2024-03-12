@@ -14,7 +14,7 @@ function GameMoreInfo({
 		>
 			<div
 				id="info"
-				className="min-h-[70%] w-[40%] overflow-scroll rounded-xl bg-zinc-700 shadow-xl"
+				className="min-h-[60%] w-[40%] overflow-scroll rounded-xl bg-zinc-700 shadow-xl"
 			>
 				<div
 					id="hero-image"
@@ -32,37 +32,41 @@ function GameMoreInfo({
 				</div>
 				<table className="w-full overflow-scroll">
 					<tr>
-						<td className="p-2 font-bold">Status</td>
-						<td className="p-2">{containedGame.status}</td>
+						<td className="p-4 font-bold">Status</td>
+						<td className="p-4">{containedGame.status}</td>
 					</tr>
 					<tr>
-						<td className="p-2 font-bold">Full Title</td>
-						<td className="p-2">{containedGame.title}</td>
+						<td className="p-4 font-bold">Full Title</td>
+						<td className="p-4">{containedGame.title}</td>
 					</tr>
 					<tr>
-						<td className="p-2 font-bold">Year of Release</td>
-						<td className="p-2">{containedGame.year}</td>
+						<td className="p-4 font-bold">Year of Release</td>
+						<td className="p-4">{containedGame.year}</td>
 					</tr>
 					<tr>
-						<td className="p-2 font-bold">Platform</td>
-						<td className="p-2">{containedGame.platform}</td>
+						<td className="p-4 font-bold">Platform</td>
+						<td className="p-4">{containedGame.platform}</td>
 					</tr>
 					{containedGame.developer ? (
 						<tr>
-							<td className="p-2 font-bold">Developer</td>
-							<td className="p-2">{containedGame.developer}</td>
+							<td className="p-4 font-bold">Developer</td>
+							<td className="p-4">{containedGame.developer}</td>
 						</tr>
 					) : null}
 					{containedGame.publisher ? (
 						<tr>
-							<td className="p-2 font-bold">Publisher</td>
-							<td className="p-2">{containedGame.publisher}</td>
+							<td className="p-4 font-bold">Publisher</td>
+							<td className="p-4">{containedGame.publisher}</td>
 						</tr>
 					) : null}
 					{containedGame.genres ? (
 						<tr>
-							<td className="p-2 font-bold">Developer</td>
-							<td className="p-2">{containedGame.genres} </td>
+							<td className="p-4 font-bold">Developer</td>
+							<td className="p-4">
+								{containedGame.genres.map(
+									(genre) => `${genre} `,
+								)}
+							</td>
 						</tr>
 					) : null}
 				</table>
