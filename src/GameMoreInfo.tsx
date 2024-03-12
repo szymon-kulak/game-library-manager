@@ -14,7 +14,7 @@ function GameMoreInfo({
 		>
 			<div
 				id="info"
-				className="min-h-[70%] w-[40%] overflow-scroll rounded-xl bg-zinc-700 shadow-xl"
+				className="min-h-[70%] w-[40%]  rounded-xl bg-zinc-700 shadow-xl"
 			>
 				<div
 					id="hero-image"
@@ -62,7 +62,11 @@ function GameMoreInfo({
 					{containedGame.genres ? (
 						<tr>
 							<td className="p-2 font-bold">Developer</td>
-							<td className="p-2">{containedGame.genres} </td>
+							<td className="p-2">
+								{containedGame.genres.map(
+									(genre) => `${genre} `,
+								)}{" "}
+							</td>
 						</tr>
 					) : null}
 				</table>
