@@ -78,6 +78,28 @@ const GameList: Game[] = [
 		genres: ["Survival Horror", "Third-Person Shooter"],
 		cover: "https://upload.wikimedia.org/wikipedia/en/f/fd/Resident_Evil_2_Remake.jpg",
 	},
+	{
+		id: 7,
+		title: "Disco Elysium",
+		year: 2019,
+		platform: "PC (Steam)",
+		status: "Completed",
+		developer: "ZA/UM",
+		publisher: "ZA/UM",
+		genres: ["RPG", "cRPG"],
+		cover: "https://upload.wikimedia.org/wikipedia/en/thumb/0/0d/Disco_Elysium_Poster.jpeg/220px-Disco_Elysium_Poster.jpeg",
+	},
+	{
+		id: 8,
+		title: "The Legend of Zelda: Ocarina of Time",
+		year: 1998,
+		platform: "Nintendo 64",
+		status: "Completed",
+		developer: "Nintendo EAD",
+		publisher: "Nintendo",
+		genres: ["Action", "Adventure", "RPG"],
+		cover: "https://upload.wikimedia.org/wikipedia/en/thumb/5/57/The_Legend_of_Zelda_Ocarina_of_Time.jpg/220px-The_Legend_of_Zelda_Ocarina_of_Time.jpg",
+	},
 ];
 
 export default GameList;

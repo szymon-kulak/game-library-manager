@@ -18,14 +18,14 @@ function GameMoreInfo({
 			>
 				<div
 					id="hero-image"
-					className="flex items-center justify-between rounded-xl bg-zinc-800 p-4 shadow-xl"
+					className="flex min-h-48 items-center justify-between rounded-xl bg-zinc-800 p-4 shadow-xl"
 				>
 					<img
 						src={containedGame.cover}
 						className="inline-block w-40 rounded-xl shadow-xl"
 					/>
 					<div className="flex flex-grow items-center justify-center">
-						<h3 className="inline-block text-3xl text-zinc-50 drop-shadow-xl">
+						<h3 className="inline-block text-center text-3xl text-zinc-50 drop-shadow-xl">
 							{containedGame.title}
 						</h3>
 					</div>
