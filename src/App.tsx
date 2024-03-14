@@ -21,7 +21,13 @@ function App() {
 					game.developer
 						?.toLowerCase()
 						.includes(text.toLowerCase()) ||
-					game.publisher?.toLowerCase().includes(text.toLowerCase()),
+					game.publisher
+						?.toLowerCase()
+						.includes(text.toLowerCase()) ||
+					game.year
+						.toString()
+						.toLowerCase()
+						.includes(text.toLowerCase()),
 			),
 		);
 	};
