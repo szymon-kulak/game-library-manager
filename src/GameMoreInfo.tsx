@@ -3,9 +3,11 @@ import { Game } from "./GameList";
 function GameMoreInfo({
 	containedGame,
 	isVisible,
+	darkMode,
 }: {
 	containedGame: Game;
 	isVisible: boolean;
+	darkMode: boolean;
 }) {
 	return (
 		<div
@@ -14,11 +16,11 @@ function GameMoreInfo({
 		>
 			<div
 				id="info"
-				className="min-h-[60%] w-[40%] overflow-scroll rounded-xl bg-zinc-700 shadow-xl"
+				className={`min-h-[60%] w-[40%] overflow-scroll rounded-xl ${darkMode ? "bg-zinc-700" : "bg-zinc-100"} shadow-xl`}
 			>
 				<div
 					id="hero-image"
-					className="flex items-center justify-between rounded-xl bg-zinc-800 p-4 shadow-xl"
+					className={`flex items-center justify-between rounded-xl ${darkMode ? "bg-zinc-800" : "bg-zinc-500"} p-4 shadow-xl`}
 				>
 					<img
 						src={containedGame.cover}
