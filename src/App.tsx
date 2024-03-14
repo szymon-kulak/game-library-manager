@@ -4,7 +4,7 @@ import GameTile from "./GameTile";
 import DarkModeSwitch from "./DarkModeSwitch";
 
 function App() {
-	const [darkMode, setDarkMode] = useState(false);
+	const [darkMode, setDarkMode] = useState(true);
 	const [gamesToDisplay, setGamesToDisplay] = useState(GameList);
 	const [searchText, updateSearch] = useState("");
 
