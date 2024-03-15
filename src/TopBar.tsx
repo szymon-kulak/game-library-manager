@@ -22,7 +22,7 @@ function TopBar({
 				type="text"
 				name="search"
 				id="search"
-				className={`h-8 w-64 rounded-sm ${darkMode ? "bg-zinc-400 placeholder:text-zinc-600 focus:placeholder:text-zinc-950" : "bg-zinc-900 placeholder:text-zinc-900 focus:placeholder:text-zinc-950"} focus: bg-white p-2 opacity-20 shadow-sm outline-none transition-all  duration-300 ease-linear focus:h-10 focus:w-[40rem] focus:text-zinc-950 focus:opacity-100 `}
+				className={`h-8 w-64 rounded-sm ${darkMode ? "bg-zinc-400 placeholder:text-zinc-600 focus:placeholder:text-zinc-950" : "bg-zinc-900 placeholder:text-zinc-900 focus:placeholder:text-zinc-950"} focus: bg-white p-2 opacity-20 shadow-sm outline-none transition-all duration-300 ease-linear focus:h-10 focus:w-[40rem] focus:text-zinc-950 focus:opacity-100 `}
 				placeholder="Search"
 				value={searchText}
 				onChange={(e) => filterBySearch(e.target.value)}

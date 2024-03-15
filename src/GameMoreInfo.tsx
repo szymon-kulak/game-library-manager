@@ -16,7 +16,7 @@ function GameMoreInfo({
 		>
 			<div
 				id="info"
-				className={`min-h-[60%] w-[40%] overflow-scroll rounded-xl ${darkMode ? "bg-zinc-700" : "bg-zinc-100"} shadow-xl`}
+				className={`min-h-[60%] w-[40%]  rounded-xl ${darkMode ? "bg-zinc-700" : "bg-zinc-100"} shadow-xl`}
 			>
 				<div
 					id="hero-image"
