@@ -1,7 +1,8 @@
 import { useState } from "react";
 import GameList from "./GameList";
 import GameTile from "./GameTile";
-import DarkModeSwitch from "./DarkModeSwitch";
+import SideNav from "./SideNav";
+import TopBar from "./TopBar";
 
 function App() {
 	const [darkMode, setDarkMode] = useState(true);
@@ -52,47 +53,13 @@ function App() {
 		<div
 			className={`h-screen w-screen ${darkMode ? "bg-zinc-800" : "bg-zinc-200"} ${darkMode ? "text-zinc-200" : "text-zinc-800"}`}
 		>
-			<header
-				className={`fixed z-10 flex h-16 w-screen items-center justify-between ${darkMode ? "bg-zinc-900" : "bg-zinc-300"} p-4 shadow-lg`}
-			>
-				<ul>
-					<li>GLM</li>
-				</ul>
-				<input
-					type="text"
-					name="search"
-					id="search"
-					className={`h-8 w-64 rounded-sm ${darkMode ? "bg-zinc-400 placeholder:text-zinc-600 focus:placeholder:text-zinc-950" : "bg-zinc-900 placeholder:text-zinc-900 focus:placeholder:text-zinc-950"} focus: bg-white p-2 opacity-20 shadow-sm outline-none transition-all  duration-300 ease-linear focus:h-10 focus:w-[40rem] focus:text-zinc-950 focus:opacity-100 `}
-					placeholder="Search"
-					value={searchText}
-					onChange={(e) => filterBySearch(e.target.value)}
-				/>
-				<DarkModeSwitch
-					darkMode={darkMode}
-					toggleFunc={toggleDarkMode}
-				/>
-			</header>
-			<nav
-				className={`fixed mt-16 h-full w-64 ${darkMode ? "bg-zinc-900" : "bg-zinc-300"} shadow-lg`}
-			>
-				<ul className="p-4">
-					{[
-						"Playing",
-						"Paused",
-						"In Queue",
-						"Backlog",
-						"Completed",
-						"Dropped",
-					].map((item) => (
-						<li
-							key={item}
-							className={`mb-2 rounded-xl p-4 ${darkMode ? "hover:bg-zinc-800" : "hover:bg-zinc-400"}`}
-						>
-							{item}
-						</li>
-					))}
-				</ul>
-			</nav>
+			<TopBar
+				darkMode={darkMode}
+				searchText={searchText}
+				filterBySearch={filterBySearch}
+				toggleDarkMode={toggleDarkMode}
+			/>
+			<SideNav darkMode={darkMode} />
 			<div id="main-wrapper" className="h-full w-full pl-64 pt-16">
 				<main
 					className={`h-full w-full flex-wrap gap-4 overflow-scroll ${darkMode ? "bg-zinc-800" : "bg-zinc-100"} p-6`}
