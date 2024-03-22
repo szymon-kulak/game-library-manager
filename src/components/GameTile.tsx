@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Game } from "./GameList";
+import { Game } from "../GameList";
 import GameMoreInfo from "./GameMoreInfo";
 
 function GameTile({

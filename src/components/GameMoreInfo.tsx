@@ -1,4 +1,4 @@
-import { Game } from "./GameList";
+import { Game } from "../GameList";
 
 function GameMoreInfo({
 	containedGame,

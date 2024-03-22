@@ -1,8 +1,8 @@
 import { useState } from "react";
 import GameList from "./GameList";
-import GameTile from "./GameTile";
-import SideNav from "./SideNav";
-import TopBar from "./TopBar";
+import GameTile from "./components/GameTile";
+import SideNav from "./components/SideNav";
+import TopBar from "./components/TopBar";
 
 function App() {
 	const [darkMode, setDarkMode] = useState(true);
