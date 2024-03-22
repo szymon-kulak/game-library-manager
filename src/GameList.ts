@@ -11,6 +11,13 @@ export type Game = {
 	background?: string;
 };
 
+enum playStatus {
+	"Not In Library",
+	"Unplayed",
+}
+
+console.log(playStatus[0]);
+
 // This simulates the db so I can finish the frontend while working on the backend
 
 const GameList: Game[] = [
