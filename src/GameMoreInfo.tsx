@@ -16,11 +16,11 @@ function GameMoreInfo({
 		>
 			<div
 				id="info"
-				className={`min-h-[60%] w-[40%]  rounded-xl ${darkMode ? "bg-zinc-700" : "bg-zinc-100"} shadow-xl`}
+				className={`min-h-[60%] w-[40%]  rounded-xl ${darkMode ? "bg-zinc-700" : "bg-zinc-100"} shadow-xl `}
 			>
 				<div
 					id="hero-image"
-					className={`flex min-h-48 items-center justify-between rounded-xl ${darkMode ? "bg-zinc-800" : "bg-zinc-500"} p-4 shadow-xl`}
+					className={`flex min-h-48 items-center justify-between rounded-xl ${darkMode ? "bg-zinc-800" : "bg-zinc-500"} p-4 shadow-xl `}
 				>
 					<img
 						src={containedGame.cover}

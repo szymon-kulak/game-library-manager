@@ -1,4 +1,4 @@
-export interface Game {
+export type Game = {
 	id: number;
 	title: string;
 	status: string;
@@ -9,7 +9,9 @@ export interface Game {
 	genres?: string[];
 	cover?: string;
 	background?: string;
-}
+};
+
+// This simulates the db so I can finish the frontend while working on the backend
 
 const GameList: Game[] = [
 	{

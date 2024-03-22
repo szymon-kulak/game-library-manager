@@ -62,7 +62,7 @@ function App() {
 			<SideNav darkMode={darkMode} />
 			<div id="main-wrapper" className="h-full w-full pl-64 pt-16">
 				<main
-					className={`h-full w-full flex-wrap gap-4 overflow-scroll ${darkMode ? "bg-zinc-800" : "bg-zinc-100"} p-6`}
+					className={`h-full w-full flex-wrap gap-4 overflow-scroll ${darkMode ? "bg-zinc-800" : "bg-zinc-100"} p-6 transition-all duration-300 ease-linear`}
 				>
 					{gamesToDisplay.map((game) => (
 						<GameTile
@@ -73,7 +73,7 @@ function App() {
 					))}
 				</main>
 				<button
-					className={`absolute bottom-8 right-8 h-16 w-40 rounded-xl ${darkMode ? "bg-zinc-600" : "bg-zinc-500 text-zinc-50"} shadow-xl`}
+					className={`absolute bottom-8 right-8 h-16 w-40 rounded-xl ${darkMode ? "bg-zinc-600" : "bg-zinc-500 text-zinc-50"} shadow-xl transition-all duration-300 ease-linear`}
 					onClick={addGame}
 				>
 					+ Add Game

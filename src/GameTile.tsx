@@ -35,7 +35,7 @@ function GameTile({
 				)}
 			</div>
 			<div
-				className={`absolute bottom-0 flex h-12 w-full items-center justify-center overflow-clip text-clip rounded-b-xl ${darkMode ? "bg-black" : "bg-white"} p-2 text-center`}
+				className={`absolute bottom-0 flex h-12 w-full items-center justify-center overflow-clip text-clip rounded-b-xl ${darkMode ? "bg-black" : "bg-white"} p-2 text-center transition-all duration-300 ease-linear`}
 			>
 				{containedGame.title}
 			</div>
