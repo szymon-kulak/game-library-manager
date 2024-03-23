@@ -12,11 +12,11 @@ function GameMoreInfo({
 	return (
 		<div
 			id="background"
-			className={`fixed left-0 top-0 h-screen w-screen bg-zinc-900 bg-opacity-40 ${isVisible ? "visible" : "invisible"} left-0 top-0 z-50 flex items-center justify-center overflow-auto backdrop-blur-sm`}
+			className={`fixed left-0 top-0 z-50 flex h-screen w-screen items-center justify-center overflow-auto bg-zinc-900 bg-opacity-40 backdrop-blur-sm ${isVisible ? "visible" : "invisible"}`}
 		>
 			<div
 				id="info"
-				className={`min-h-[60%] w-[40%]  rounded-xl ${darkMode ? "bg-zinc-700" : "bg-zinc-100"} shadow-xl `}
+				className={`min-h-[60%] w-[40%] rounded-xl shadow-xl ${darkMode ? "bg-zinc-700" : "bg-zinc-100"}`}
 			>
 				<div
 					id="hero-image"

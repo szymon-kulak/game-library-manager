@@ -20,7 +20,7 @@ console.log(playStatus[0]);
 
 // This simulates the db so I can finish the frontend while working on the backend
 
-const GameList: Game[] = [
+let GameList: Game[] = [
 	{
 		id: 1,
 		title: "Super Mario Bros 3",
@@ -109,6 +109,19 @@ const GameList: Game[] = [
 		genres: ["Action", "Adventure", "RPG"],
 		cover: "https://upload.wikimedia.org/wikipedia/en/thumb/5/57/The_Legend_of_Zelda_Ocarina_of_Time.jpg/220px-The_Legend_of_Zelda_Ocarina_of_Time.jpg",
 	},
+	{
+		id: 9,
+		title: "Final Fantasy VII",
+		year: 1997,
+		platform: "PS1",
+		status: "Playing",
+		developer: "Square",
+		publisher: "Square",
+		genres: ["jRPG", "RPG"],
+		cover: "https://upload.wikimedia.org/wikipedia/en/c/c2/Final_Fantasy_VII_Box_Art.jpg",
+	},
 ];
+
+GameList = GameList.sort((a, b) => a.title.localeCompare(b.title));
 
 export default GameList;
