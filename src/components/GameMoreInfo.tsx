@@ -1,13 +1,16 @@
 import { Game } from "../GameList";
+import { IoClose } from "react-icons/io5";
 
 function GameMoreInfo({
 	containedGame,
 	isVisible,
 	darkMode,
+	setMoreInfo,
 }: {
 	containedGame: Game;
 	isVisible: boolean;
 	darkMode: boolean;
+	setMoreInfo: Function;
 }) {
 	return (
 		<div
@@ -16,7 +19,7 @@ function GameMoreInfo({
 		>
 			<div
 				id="info"
-				className={`min-h-[60%] w-[40%] rounded-xl shadow-xl ${darkMode ? "bg-zinc-700" : "bg-zinc-100"}`}
+				className={`relative min-h-[60%] w-[40%] rounded-xl shadow-xl ${darkMode ? "bg-zinc-700" : "bg-zinc-100"}`}
 			>
 				<div
 					id="hero-image"
@@ -31,6 +34,12 @@ function GameMoreInfo({
 							{containedGame.title}
 						</h3>
 					</div>
+					<button
+						className={`absolute right-4 top-4`}
+						onClick={() => setMoreInfo(!isVisible)}
+					>
+						<IoClose size={32} />
+					</button>
 				</div>
 				<table className="w-full overflow-scroll">
 					<tr>
